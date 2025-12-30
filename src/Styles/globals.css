@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Better focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid #ef4444;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* 3. Custom scrollbar - Premium look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* 4. Reduce motion for users who prefer */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 5. Container utility  */
+@layer components {
+  .container-max {
+    @apply max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* 6. Text balance  */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
