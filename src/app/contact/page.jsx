@@ -74,7 +74,10 @@ export default function ContactPage() {
                 icon: Mail,
                 title: "Email Us",
                 gradient: "from-blue-500 to-cyan-500",
-                details: ["support@amrMcaBazar.com", "hello@amrMcaBazar.com"],
+                details: [
+                  "support@amrPixelBazar.com",
+                  "hello@amrPixelBazar.com",
+                ],
               },
               {
                 icon: MapPin,

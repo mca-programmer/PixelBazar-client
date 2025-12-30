@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10">
         <div>
-          <h3 className="text-2xl font-black mb-6">McaBazar</h3>
+          <h3 className="text-2xl font-black mb-6">PixelBazar</h3>
           <p className="text-gray-400">Your #1 online shopping destination</p>
         </div>
         <div>
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-gray-500 mt-10 border-t border-gray-800 pt-8">
-        © 2025 McaBazar Cart. All rights reserved.
+        © 2025 PixelBazar Cart. All rights reserved.
       </div>
     </footer>
   );

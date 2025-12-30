@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   if (!product) return { title: "Product Not Found" };
 
   return {
-    title: `${product.title} - ${product.brand} | McaBazar Cart`,
+    title: `${product.title} - ${product.brand} | PixelBazar Cart`,
     description: product.description?.slice(0, 160),
     openGraph: { images: [product.thumbnail] },
   };

@@ -76,7 +76,7 @@ export default function LoginPage() {
             <Mountain className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-            McaBazar
+            PixelBazar
           </h1>
           <p className="mt-3 text-lg text-gray-600">Welcome back, Seller!</p>
         </div>
@@ -211,7 +211,7 @@ export default function LoginPage() {
         </div>
 
         <p className="text-center mt-10 text-gray-600">
-          © 2025 McaBazar • Sell Anything, Anywhere
+          © 2025 PixelBazar • Sell Anything, Anywhere
         </p>
       </div>
     </div>

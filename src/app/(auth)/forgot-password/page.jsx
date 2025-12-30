@@ -129,7 +129,7 @@ export default function ForgotPasswordPage() {
         </div>
 
         <p className="text-center mt-10 text-gray-600">
-          © 2025 McaBazar • Sell Anything, Anywhere
+          © 2025 PixelBazar • Sell Anything, Anywhere
         </p>
       </div>
     </div>

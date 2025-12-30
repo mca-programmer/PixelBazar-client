@@ -29,7 +29,7 @@ export default function AboutPage() {
             transition={{ duration: 0.9 }}
           >
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 tracking-tight">
-              About AMR McaBazar CART
+              About AMR PixelBazar CART
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl font-light max-w-3xl sm:max-w-4xl mx-auto opacity-95">
               Bangladesh's Fastest Growing Online Shopping Destination
@@ -65,9 +65,9 @@ export default function AboutPage() {
                 We Deliver Happiness at Your Doorstep
               </h2>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                Founded in 2023, AMR McaBazar CART started with a simple mission
-                — to make online shopping easy, fast, and affordable for every
-                Bangladeshi.
+                Founded in 2023, AMR PixelBazar CART started with a simple
+                mission — to make online shopping easy, fast, and affordable for
+                every Bangladeshi.
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
                 Today, we are one of the fastest-growing e-commerce platforms in
@@ -106,7 +106,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-2 sm:mb-4">
-              Why Millions Trust McaBazar CART
+              Why Millions Trust PixelBazar CART
             </h2>
             <p className="text-base sm:text-lg text-gray-600">
               We don't just sell products — we deliver trust
@@ -215,7 +215,7 @@ export default function AboutPage() {
               Ready to Shop with Confidence?
             </h2>
             <p className="text-base sm:text-lg mb-6 sm:mb-10 text-gray-300">
-              Join 500,000+ happy customers who trust AMR McaBazar CART every
+              Join 500,000+ happy customers who trust AMR PixelBazar CART every
               day
             </p>
             <button className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-700 hover:to-pink-700 text-white font-bold text-base sm:text-xl px-8 sm:px-12 py-3 sm:py-5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2 sm:gap-3 mx-auto">

@@ -45,13 +45,13 @@ export default function Navbar() {
               <div className="relative w-10 h-10 lg:w-12 lg:h-12">
                 <Image
                   src="/logo.png"
-                  alt="McaBazar"
+                  alt="PixelBazar"
                   fill
                   className="object-contain"
                 />
               </div>
               <span className="text-2xl lg:text-3xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                McaBazar
+                PixelBazar
               </span>
             </Link>
 
@@ -211,13 +211,13 @@ export default function Navbar() {
                 <div className="relative w-12 h-12">
                   <Image
                     src="/logo.png"
-                    alt="McaBazar"
+                    alt="PixelBazar"
                     fill
                     className="object-contain"
                   />
                 </div>
                 <span className="text-2xl font-black text-red-600">
-                  McaBazar
+                  PixelBazar
                 </span>
               </Link>
               <button

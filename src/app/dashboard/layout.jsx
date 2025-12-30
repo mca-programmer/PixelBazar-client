@@ -89,7 +89,7 @@ export default function DashboardLayout({ children }) {
             </div>
             <div>
               <h1 className="text-lg sm:text-2xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                McaBazar
+                PixelBazar
               </h1>
               <p className="text-xs text-gray-500">Seller Dashboard</p>
             </div>

@@ -16,10 +16,10 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "McaBazar - Premium Online Shopping",
+  title: "PixelBazar - Premium Online Shopping",
   description: "Next.js Full-Stack E-commerce Store with Cart",
   keywords: "ecommerce, shopping, online store, nextjs, react",
-  authors: [{ name: "McaBazar Team" }],
+  authors: [{ name: "PixelBazar Team" }],
 };
 
 export const viewport = {
