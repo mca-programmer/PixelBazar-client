@@ -39,6 +39,32 @@
 </div>
 
 <br/>
+## 📸 Screenshots
+
+<div align="center">
+
+### 🏠 Home Page
+<img src="https://i.postimg.cc/mZXnYjyt/pixel-bazar.png" alt="Home Page" width="100%"/>
+
+<br/><br/>
+
+### 🛍️ Products
+<img src="https://i.postimg.cc/0yYR0mQ1/pixel-bazar2.png" alt="Products" width="100%"/>
+
+<br/><br/>
+
+### 🛒 Shopping Cart
+<img src="https://i.postimg.cc/c1PLDRs3/pixel-bazar-cart.png" alt="Shopping Cart" width="100%"/>
+
+
+</div>
+
+> **Note**: Add actual screenshots by replacing the placeholder URLs above
+
+<br/>
+
+---
+
 
 ## 📖 Table of Contents
 
@@ -1344,31 +1370,6 @@ graph LR
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### 🏠 Home Page
-<img src="https://i.postimg.cc/mZXnYjyt/pixel-bazar.png" alt="Home Page" width="100%"/>
-
-<br/><br/>
-
-### 🛍️ Products
-<img src="https://i.postimg.cc/0yYR0mQ1/pixel-bazar2.png" alt="Products" width="100%"/>
-
-<br/><br/>
-
-### 🛒 Shopping Cart
-<img src="https://i.postimg.cc/c1PLDRs3/pixel-bazar-cart.png" alt="Shopping Cart" width="100%"/>
-
-
-</div>
-
-> **Note**: Add actual screenshots by replacing the placeholder URLs above
-
-<br/>
-
----
 
 ## 🤝 Contributing
 
@@ -1498,3 +1499,4 @@ If you find this project helpful, please consider giving it a ⭐!
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
 </div>
+
