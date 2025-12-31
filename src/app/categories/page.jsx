@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { getProducts } from "@/lib/api";
 
-// 
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
+// Create URL-friendly slug
 function createSlug(name) {
   if (!name) return "uncategorized";
   return name
@@ -11,9 +14,6 @@ function createSlug(name) {
     .replace(/\-\-+/g, "-") 
     .trim();
 }
-
-
-
 
 export default async function AllCategoriesPage() {
   let categories = [];

@@ -1,9 +1,8 @@
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 // -------------------------
 // Utility Functions
-
+// -------------------------
 
 // Calculate original price from discount
 function calculateOriginalPrice(price, discountPercentage) {
@@ -30,7 +29,10 @@ function processProduct(product) {
 //  Get All Products
 // -------------------------
 export async function getProducts({ limit = 24, skip = 0 } = {}) {
-    const res = await fetch(`${API_BASE_URL}/products?limit=${limit}&skip=${skip}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products?limit=${limit}&skip=${skip}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Failed to fetch products");
 
     const data = await res.json();
@@ -53,7 +55,7 @@ export async function getMyProducts(sellerId, page = 1, limit = 12) {
 
     const res = await fetch(
         `${API_BASE_URL}/my-products?sellerId=${sellerId}&page=${page}&limit=${limit}`,
-        { cache: "no-store" }
+        { next: { revalidate: 60 } }
     );
 
     if (!res.ok) throw new Error("Failed to load your products");
@@ -75,7 +77,10 @@ export async function getMyProducts(sellerId, page = 1, limit = 12) {
 export async function getProductById(id) {
     if (!id) throw new Error("Product ID required");
 
-    const res = await fetch(`${API_BASE_URL}/products/${id}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/${id}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Product not found");
 
     const data = await res.json();
@@ -91,6 +96,7 @@ export async function createProduct(productData, sellerId) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
+        cache: "no-store", // POST requests should not be cached
     });
 
     if (!res.ok) {
@@ -107,6 +113,7 @@ export async function updateProduct(id, updatedData, sellerId) {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
+        cache: "no-store", // PUT requests should not be cached
     });
 
     if (!res.ok) {
@@ -118,7 +125,10 @@ export async function updateProduct(id, updatedData, sellerId) {
 }
 
 export async function deleteProduct(id) {
-    const res = await fetch(`${API_BASE_URL}/products/${id}`, { method: "DELETE" });
+    const res = await fetch(`${API_BASE_URL}/products/${id}`, {
+        method: "DELETE",
+        cache: "no-store", // DELETE requests should not be cached
+    });
     if (!res.ok) throw new Error("Failed to delete product");
     return res.json();
 }
@@ -127,7 +137,10 @@ export async function deleteProduct(id) {
 //  Categories
 // -------------------------
 export async function getCategories() {
-    const res = await fetch(`${API_BASE_URL}/categories`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/categories`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Failed to fetch categories");
 
     const data = await res.json();
@@ -140,7 +153,10 @@ export async function getCategories() {
 export async function getProductsByCategory(category, { limit = 24, skip = 0 } = {}) {
     if (!category) return { products: [], total: 0 };
 
-    const res = await fetch(`${API_BASE_URL}/products/category/${category}?limit=${limit}&skip=${skip}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/category/${category}?limit=${limit}&skip=${skip}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Failed to load category products");
 
     const data = await res.json();
@@ -156,7 +172,10 @@ export async function getProductsByCategory(category, { limit = 24, skip = 0 } =
 export async function searchProducts(query) {
     if (!query) return [];
 
-    const res = await fetch(`${API_BASE_URL}/products/search?q=${encodeURIComponent(query)}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/search?q=${encodeURIComponent(query)}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Search failed");
 
     const data = await res.json();
@@ -170,7 +189,10 @@ export async function searchProducts(query) {
 //  Filter Products
 // -------------------------
 export async function getProductsByPrice(minPrice = 0, maxPrice = 999999) {
-    const res = await fetch(`${API_BASE_URL}/products/filter?minPrice=${minPrice}&maxPrice=${maxPrice}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/filter?minPrice=${minPrice}&maxPrice=${maxPrice}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Filtering failed");
 
     const data = await res.json();
@@ -182,7 +204,10 @@ export async function getProductsByPrice(minPrice = 0, maxPrice = 999999) {
 
 export async function getProductsByBrand(brand) {
     if (!brand) return [];
-    const res = await fetch(`${API_BASE_URL}/products/brand/${brand}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/brand/${brand}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Brand filter failed");
     const data = await res.json();
     return (Array.isArray(data) ? data : []).map(processProduct);
@@ -190,7 +215,10 @@ export async function getProductsByBrand(brand) {
 
 export async function getProductsByTag(tag) {
     if (!tag) return [];
-    const res = await fetch(`${API_BASE_URL}/products/tags/${tag}`, { cache: "no-store" });
+    const res = await fetch(
+        `${API_BASE_URL}/products/tags/${tag}`,
+        { next: { revalidate: 60 } }
+    );
     if (!res.ok) throw new Error("Tag filter failed");
     const data = await res.json();
     return (Array.isArray(data) ? data : []).map(processProduct);
